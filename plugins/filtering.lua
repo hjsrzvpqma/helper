@@ -25,7 +25,7 @@ local function list_filter(msg)
    local hash = get_filter_hash(msg) 
    if hash then 
       local names = redis:hkeys(hash) 
-      local text = 'FilterList for'..msg.to.title..'\n And Your #ID : '..msg.to.id..':\n______________________________\n' 
+      local text = 'FilterList for \n'..msg.to.title..'\n And Your\n #ID : '..msg.to.id..':\n_________\n' 
       for i=1, #names do 
          text = text..'> '..names[i]..'\n' 
       end 
