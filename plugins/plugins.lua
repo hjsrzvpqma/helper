@@ -197,10 +197,6 @@ end
 return {
   description = "Plugin to manage other plugins. Enable, disable or reload.", 
   usage = {
-      moderator = {
-          "!plugins - [plugin] chat : disable plugin only this chat.",
-          "!plugins + [plugin] chat : enable plugin only this chat.",
-          },
       sudo = {
           "!plugins : list all plugins.",
           "!plugins + [plugin] : enable plugin.",
