@@ -207,8 +207,6 @@ return {
     "^پلاگین$",
     "^!plugins? (+) ([%w_%.%-]+)$",
     "^!plugins? (-) ([%w_%.%-]+)$",
-    "^!plugins? (+) ([%w_%.%-]+) (chat)",
-    "^!plugins? (-) ([%w_%.%-]+) (chat)",
     "^!plugins? (?)$" },
   run = run,
   moderated = true, -- set to moderator mode
