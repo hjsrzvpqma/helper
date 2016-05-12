@@ -25,7 +25,7 @@ return {
   patterns = {
     "^!tex (.+)$",
     "^!tex2img (.+)$",
-    "^!t2i (.+)$",
+    "^!text2img (.+)$",
     "^!textopic (.+)$",
     "^!tex2pic (.+)$"
   },
