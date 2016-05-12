@@ -3,7 +3,7 @@ text = io.popen("cal"):read('*all')
   return text
 end
 return {
-description " show date ",
+description = " show date ",
 usage = {
 "!date : show date",
 },
