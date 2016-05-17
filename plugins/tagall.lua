@@ -21,12 +21,12 @@ local msgss = 0
    text = text..msgss.."-  @"..v.username.."\n" 
   end 
     end 
- text = text.."\n"..cb_extra.msg_text 
+ text = text.."\nSuccefulli done! By Spherobot\n"..cb_extra.msg_text 
  send_large_msg(receiver, text) 
 end 
 local function run(msg, matches) 
     local receiver = get_receiver(msg) 
- if not is_owner msg then 
+ if not is_owner(msg) then 
   return "Only for the owner!" 
  end 
  if matches[1] then 
