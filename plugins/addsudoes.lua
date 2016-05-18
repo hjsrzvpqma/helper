@@ -21,7 +21,7 @@ user = {
 moderator = {
 "!addsudo : invite Sudo to your group" },
 },
-patterns = {
+patterns ={
 "^[~!/][Aa][Dd][Dd][Ss][uU][Dd][oO]$",
 "^[Aa][Dd][Dd][Ss][uU][Dd][oO]$",
 "^[~!/][Aa][Dd][Dd][Aa][Dd][Mm][Ii][Nn]$",
@@ -30,3 +30,5 @@ patterns = {
 run = run
 }
 end
+
+-- a
