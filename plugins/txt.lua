@@ -4,8 +4,7 @@ local text = '*'..msg.from.print_name..'*_You're not Sudo_'
 send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
 text = io.popen("cat" ..matches[1]):read('*all')
-  local text = '_'..text..'_'
-send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
+ return text
 end
 return {
   patterns = {
