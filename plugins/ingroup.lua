@@ -1500,7 +1500,8 @@ if matches[1] == 'newlink' and not is_realm(msg) then
         return "Create a link using /newlink first !"
       end
        savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested group link ["..group_link.."]")
-      return "Group Link for "..string.gsub(msg.to.print_name, "_", " ").." :\n--------------------------\n"..group_link
+      return "[Link]("..group_link..") *for "..string.gsub(msg.to.print_name, "_", " ").."* 
+send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
     end
     if matches[1] == 'setowner' and matches[2] then
       if not is_owner(msg) then
