@@ -52,16 +52,17 @@ local function description_rules(msg, nama)
       local rules = ""
       if data[tostring(msg.to.id)]["description"] then
          about = data[tostring(msg.to.id)]["description"]
-         about = "\nAbout :\n"..about.."\n"
+         about = "\n*About* :\n_"..about.."_\n"
+send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
       end
       if data[tostring(msg.to.id)]["rules"] then
          rules = data[tostring(msg.to.id)]["rules"]
          rules = "\nRules :\n"..rules.."\n"
       end
-      local sambutan = "Hi "..nama.."\nwelcome to: '"..string.gsub(msg.to.print_name, "_", " ").."'\n\n"
+      local sambutan = "*Hi* "..nama.."\n*welcome to*: '_"..string.gsub(msg.to.print_name, "_", " ").."_'\n\n"
       local text = sambutan..about..rules.."\n"
       local receiver = get_receiver(msg)
-      send_large_msg(receiver, text, ok_cb, false)
+      send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
    end
 end
 
@@ -70,7 +71,7 @@ local function run(msg, matches)
       return "Are you trying to troll me?"
    end
    --vardump(msg)
-   if matches[1] == "channel_add_user" then
+   if matches[1] == "chat_add_user" then
       if not msg.action.user.username then
           nama = string.gsub(msg.action.user.print_name, "_", " ")
       else 
@@ -86,9 +87,10 @@ local function run(msg, matches)
       end
       chat_new_user_link(msg)
       description_rules(msg, nama)
-   elseif matches[1] == "channel_del_user" then
+   elseif matches[1] == "chat_del_user" then
        local bye_name = msg.action.user.first_name
-       return 'bye!'..bye_name
+       local text = '*bye!*_'..bye_name..'_'
+send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
    end
 end
 
@@ -96,7 +98,7 @@ return {
    patterns = {
       "^!!tgservice (channel_add_user)$",
       "^!!tgservice (chat_add_user_link)$",
-      "^!!tgservice (channel_del_user)$",
+      "^!!tgservice (chat_del_user)$",
    },
    run = run
 }
