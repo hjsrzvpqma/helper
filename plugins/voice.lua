@@ -11,7 +11,7 @@ end
 return {
   description = "Convert text to voice",
   usage = {
-    "!voice [text]: Convert text to voice"
+    "!voice [text]: Convert text to voice."
   },
   patterns = {
     "^[!/#]voice (.+)$"
