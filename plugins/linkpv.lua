@@ -66,7 +66,7 @@ if data[tostring(msg.to.id)] then
    if not group_link then
     return "first use /newlink to create a newlink"
    end
-   local text = "Group Link for ["..msg.to.title.."]("..group_link..")"
+   local text = "*Group Link for* ["..msg.to.title.."]("..group_link..")"
 send_api_msg(msg, get_receiver_api(msg), text, true, 'md') 
  end
  end
