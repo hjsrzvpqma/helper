@@ -259,8 +259,9 @@ local function show_group_settingsmod(msg, data, target)
 local gp_type = data[tostring(msg.to.id)]['group_type'] 
 
   local settings = data[tostring(target)]['settings'] 
-  local text = "#Group settings :\n#Lock name : "..settings.lock_name.."\n#Lock  photo : "..settings.lock_photo.."\n#Lock member : "..settings.lock_member.."\n#Lock leave : "..settings.leave_ban.."\n#Lock arabic : "..settings.lock_arabic.."\n#Lock english : "..settings.lock_english.."\n#Lock chat : "..settings.lock_chat.."\n#Lock join : "..settings.lock_join.."\n#Lock tag : "..settings.antitag.."\n#Lock link : "..settings.lock_ads.."\n#Lock emoji : "..settings.antiemoji.."\n#Lock share : "..settings.lock_share.."\n#Lock video : "..settings.lock_video.."\n#Lock voice : "..settings.lock_voice.."\n#Lock badwords : "..settings.antifosh.."\n#Flood sensitivity : "..NUM_MSG_MAX.."\n#Bot protection : "..bots_protection.."\n#Group Type : "..gp_type.."\n#Bot Version : 2.2\n--------\nDeveloped by\n @joker_admin_1\nChannel: @SpheroCh" 
-  return text 
+  local text = "*#Group settings* :\n_#Lock name_ : *"..settings.lock_name.."*\n_#Lock  photo_ : *"..settings.lock_photo.."*\n_#Lock member_ : *"..settings.lock_member.."*\n_#Lock leave_ : *"..settings.leave_ban.."*\n_#Lock arabic_ : *"..settings.lock_arabic.."*\n_#Lock english_ : *"..settings.lock_english.."*\n_#Lock chat_ : *"..settings.lock_chat.."*\n_#Lock join_ : *"..settings.lock_join.."*\n_#Lock tag_ : *"..settings.antitag.."*\n_#Lock link_ : *"..settings.lock_ads.."*\n_#Lock emoji_ : *"..settings.antiemoji.."*\n_#Lock share_ : *"..settings.lock_share.."*\n_#Lock video_ : *"..settings.lock_video.."*\n_#Lock voice_ : *"..settings.lock_voice.."*\n_#Lock badwords_ : *"..settings.antifosh.."*\n_#Flood sensitivity_ : *"..NUM_MSG_MAX.."*\n_#Bot protection_ : *"..bots_protection.."*\n_#Group Type_ : *"..gp_type.."*\n*#Bot Version* : _2.2_\n*--------*\n*Developed by*\n @joker_admin_1\n*Channel*: @SpheroCh" 
+  local text = text 
+send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end 
 
 local function set_descriptionmod(msg, data, target, about) 
