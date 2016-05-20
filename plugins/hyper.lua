@@ -13,7 +13,6 @@ patterns = {
 "^[!/]markdown (.*)",
 "^[!/]hyper (.*)",
 "^[!/]mk (.*)",
-"^[!/]echo (.*)",
 },
 run = run 
 }
