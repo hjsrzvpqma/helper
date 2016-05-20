@@ -18,7 +18,7 @@ if data[tostring(msg.to.id)] then
     save_data(_config.moderation.data, data)
     local group_link = data[tostring(msg.to.id)]['settings']['set_link']
     send_large_msg(receiver, "Newlink sent!")
-    send_large_msg('user#'..msg.from.id, "Newlink has been created please use Link")
+    send_large_msg('user#'..msg.from.id, "Newlink has been Created :\n______________________________\n"..group_link)
    end
    local receiver = 'chat#'..msg.to.id
    return export_chat_link(receiver, link_callback, {receiver = receiver})
