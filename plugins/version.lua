@@ -1,18 +1,18 @@
 do
 
 function run(msg, matches)
-  return [[ SpheroBoT
+  local text = [[ [SpheroBoT](http://telegram.me/sphero)
   
- Version: 2.2
+*Version: 2.2*
   
-  more information
-  send 
-  !spherobot to chat
-  Developer and manager is 
-  @joker_admin_1
-  TNX to all]]
+_more informationsend 
+!spherobot 
+to chat_
+[Developer](http://telegram.me/mrblacklife)
+[Channel](http://telegram.me/spheroch)
+*TNX to all*]]
 end
-
+send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 return {
   description = "Shows bot version", 
   usage = "!version: Shows bot version",
