@@ -2,8 +2,8 @@ do
 
 function run(msg, matches)
   local text = [[ [Sphero](https://telegram.me/spohero) _And_ [Helper](http://telegram.me/spherorobot) _Is Online Now!_]]
-send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 reply_msg(reply_id, wayd, ok_cb, false)
+send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
 return {
   description = "Shows bot version", 
