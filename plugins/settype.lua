@@ -17,7 +17,7 @@ if not is_sudo(msg) then
 end
 return {
   patterns = {
-  "^[!/]setversion (.*)$",
+  "^[!/]settype (.*)$",
   },
   run = run
 }
