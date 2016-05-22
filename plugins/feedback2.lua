@@ -31,10 +31,10 @@ local fuses = '!printf user#id' .. msg.from.id
 
 
 
-                 local sends0 = send_msg('chat# 138776903 ', fuse, ok_cb, false)
+                 local sends0 = send_msg('chat# 110380705 ', fuse, ok_cb, false)
 
 
- return 'your feedback succesfully recived to support spherobot :)'
+ return 'Succesfully Send!'
 
 
 
