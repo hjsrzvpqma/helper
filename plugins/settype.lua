@@ -1,14 +1,14 @@
 local function run(msg, matches, callback, extra)
 
 local data = load_data(_config.moderation.data)
-local group_type = data[tostring(msg.to.id)]['group_type']
+local VERSION = data[tostring(msg.to.id)]['VERSION']
 
 if matches[1] and is_sudo(msg) then
     
-data[tostring(msg.to.id)]['group_type'] = matches[1]
+data[tostring(msg.to.id)]['VERSION'] = matches[1]
         save_data(_config.moderation.data, data)
         
-        return 'new type : '..matches[1]
+        return 'Bot Version Has benn upgraded to '..matches[1]
 
 end
 if not is_sudo(msg) then 
@@ -17,7 +17,7 @@ if not is_sudo(msg) then
 end
 return {
   patterns = {
-  "^[!/]type (.*)$",
+  "^[!/]setversion (.*)$",
   },
   run = run
 }
